@@ -6311,9 +6311,9 @@ mimic-fn@^2.0.0, mimic-fn@^2.1.0:
   resolved "https://registry.yarnpkg.com/mimic-fn/-/mimic-fn-2.1.0.tgz#7ed2c2ccccaf84d3ffcb7a69b57711fc2083401b"
   integrity sha512-OqbOk5oEQeAZ8WXWydlu9HJjz9WVdEIvamMCcXmuqUYjTknH/sqsWvhQ3vgwKFRR1HpjvNBKQ37nbJgYzGqGcg==
 
-"minhas-series-server@https://github.com/tuliofaria/minhas-series-server.git":
+"minhas-series-server@https://github.com/tuliofaria/minhas-series-server":
   version "1.0.0"
-  resolved "https://github.com/tuliofaria/minhas-series-server.git#774d53345a625842f6443a68a5dcbbad43910332"
+  resolved "https://github.com/tuliofaria/minhas-series-server#774d53345a625842f6443a68a5dcbbad43910332"
   dependencies:
     axios "^0.19.0"
     body-parser "^1.19.0"
