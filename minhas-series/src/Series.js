@@ -14,10 +14,8 @@ const Series = () => {
     }, [])
 
     const deleteSerie = id => {
-       // console.log(id)
        axios.delete('/api/series/' + id)
             .then(res => {
-              //  console.log(res)
               const filtrado = data.filter(item => item.id !== id)
               setData(filtrado)
             })
@@ -30,7 +28,7 @@ const Series = () => {
                 <td>{record.name}</td>
                 <td>
                     <button className="btn btn-danger" onClick={() =>deleteSerie(record.id)}>Remover</button>
-                    <Link to={'/generos/' + record.id} className="btn btn-warning">Editar</Link>
+                    <Link to={'/series/' + record.id} className="btn btn-warning">Editar</Link>
                 </td>
             </tr>
         )
@@ -55,6 +53,7 @@ const Series = () => {
     return (
         <div className="container">
             <h1>Séries</h1>
+            <pre>{JSON.stringify(data)}</pre>
             <Link to='/series/novo' className="btn btn-primary">Nova série</Link>
             <table className="table table-dark">
                 <thead>
