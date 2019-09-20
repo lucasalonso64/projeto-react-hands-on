@@ -28,7 +28,7 @@ const Series = () => {
                 <td>{record.name}</td>
                 <td>
                     <button className="btn btn-danger" onClick={() =>deleteSerie(record.id)}>Remover</button>
-                    <Link to={'/series/' + record.id} className="btn btn-warning">Editar</Link>
+                    <Link to={'/series/' + record.id} className="btn btn-warning">Info</Link>
                 </td>
             </tr>
         )
@@ -49,11 +49,11 @@ const Series = () => {
         )
     }
 
-
+//  <pre>{JSON.stringify(data)}</pre>
     return (
         <div className="container">
             <h1>Séries</h1>
-            <pre>{JSON.stringify(data)}</pre>
+          
             <Link to='/series/novo' className="btn btn-primary">Nova série</Link>
             <table className="table table-dark">
                 <thead>
