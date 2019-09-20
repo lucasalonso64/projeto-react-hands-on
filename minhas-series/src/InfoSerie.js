@@ -45,6 +45,10 @@ const InfoSerie = ({ match }) => {
 
     }
 
+const onChangeGenre = evt => {
+    console.log(evt.target.value)
+}      
+ 
     const onChange = field => evt => {
         setForm({
             ...form,
@@ -118,19 +122,19 @@ const InfoSerie = ({ match }) => {
                         </div>
                         <div className="form-group">
                             <label htmlFor="name">Gêneros</label>
-                            <select className="form-control" onChange={onChange('genre_id')}>
+                            <select className="form-control" onChange={onChangeGenre} value={genreId}>
                                 {genres.map(genre => <option key={genre.id} value={genre.id} selected={genre.id === form.genre}>{genre.name}</option>)}
                             </select>
                         </div>
 
                         <div className="form-check">
-                            <input className="form-check-input" type="radio" name="status" id="assistido" value="ASSISTIDO" onClick={seleciona('ASSISTIDO')} />
+                            <input className="form-check-input" type="radio" checked={form.status === 'ASSISTIDO'} name="status" id="assistido" value="ASSISTIDO" onClick={seleciona('ASSISTIDO')} />
                             <label className="form-check-label" htmlFor="assistido">
                                 Assistido
                         </label>
                         </div>
                         <div className="form-check">
-                            <input className="form-check-input" type="radio" name="status" id="paraAssistir" value="PARA_ASSISTIR" checked onClick={seleciona('PARA_ASSISTIR')} />
+                            <input className="form-check-input" type="radio" checked={form.status === 'PARA_ASSISTIR'} name="status" id="paraAssistir" value="PARA_ASSISTIR" checked onClick={seleciona('PARA_ASSISTIR')} />
                             <label className="form-check-label" htmlFor="paraAssistir">
                                 Para assistir
                         </label>
