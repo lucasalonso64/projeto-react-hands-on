@@ -23,7 +23,7 @@ const NovaSerie = () => {
     }
     return (
         <div className="container">
-            <h1>Nova série {name}</h1>
+            <h1>Nova série</h1>
             <form>
                 <div className="form-group">
                     <label htmlFor="name">Nome</label>
